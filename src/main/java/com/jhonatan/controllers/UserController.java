@@ -29,9 +29,16 @@ public class UserController {
         return user;
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     User register(@RequestBody User user) {
         //todo: registrarlo en la base de datos 
         return user;
     }
+
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    User update(@RequestBody User user) {
+        //todo: actualizarlo en la base de datos
+        return user;
+    }
+
 }
