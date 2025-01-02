@@ -42,9 +42,8 @@ public class UserController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    User delete(@PathVariable long id) {
+    void delete(@PathVariable long id) {
         //eliminarlo de la base de datos
         User user = new User(1, "David", "Palacios", "David@gmail.com", "234234", new Date());
-        return user;
     }
 }
