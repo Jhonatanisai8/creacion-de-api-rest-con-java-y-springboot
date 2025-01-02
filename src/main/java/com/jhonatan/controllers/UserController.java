@@ -22,4 +22,9 @@ public class UserController {
         return listaUsuarios;
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    User get(@PathVariable long id) {
+        User user = new User(1, "David", "Palacios", "David@gmail.com", "234234", new Date());
+        return user;
+    }
 }
