@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +26,12 @@ public class UserController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     User get(@PathVariable long id) {
         User user = new User(1, "David", "Palacios", "David@gmail.com", "234234", new Date());
+        return user;
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.POST)
+    User register(@RequestBody User user) {
+        //todo: registrarlo en la base de datos 
         return user;
     }
 }
