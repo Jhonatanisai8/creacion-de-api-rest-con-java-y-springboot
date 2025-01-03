@@ -14,7 +14,8 @@ public class UserImp
 
     @Override
     public List<User> getAll() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String query = "FROM User as u "; // query en formato que usa hibernate
+        return entityManager.createNamedQuery(query).getResultList();
     }
 
     @Override
@@ -24,7 +25,8 @@ public class UserImp
 
     @Override
     public User register(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        entityManager.merge(user);
+        return user;
     }
 
     @Override
