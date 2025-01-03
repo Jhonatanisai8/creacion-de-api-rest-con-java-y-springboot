@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserService {
 
-    @Autowired
+    @Autowired // permite la inyección de dependencias para clases Java
     UserDao userDao;
 
     public List<User> getAll() {
