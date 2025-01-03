@@ -4,7 +4,9 @@ import com.jhonatan.dao.UserDao;
 import com.jhonatan.models.User;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
 
     @Autowired // permite la inyección de dependencias para clases Java
