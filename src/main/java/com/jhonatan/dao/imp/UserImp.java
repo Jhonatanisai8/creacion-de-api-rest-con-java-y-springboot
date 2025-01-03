@@ -34,7 +34,8 @@ public class UserImp
 
     @Override
     public void delete(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        User userBuscado = get(id);
+        entityManager.remove(userBuscado);
     }
 
 }
