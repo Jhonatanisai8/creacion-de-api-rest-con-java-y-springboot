@@ -10,8 +10,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
-@Transactional
 @Repository
+@Transactional // Solo en la clase, no en cada método
 public class UserImp implements UserDao {
 
     @PersistenceContext
@@ -24,7 +24,7 @@ public class UserImp implements UserDao {
 
     @Override
     public User get(long id) {
-        return entityManager.find(User.class, id);//mapea el usuario
+        return entityManager.find(User.class, id); //mapea el usuario
     }
 
     @Override
@@ -44,5 +44,4 @@ public class UserImp implements UserDao {
         User userBuscado = get(id);
         entityManager.remove(userBuscado);
     }
-
 }
