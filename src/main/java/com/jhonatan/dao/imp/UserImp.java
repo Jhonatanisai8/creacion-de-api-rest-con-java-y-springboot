@@ -29,7 +29,7 @@ public class UserImp
 
     @Override
     public User update(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return entityManager.merge(user);
     }
 
     @Override
