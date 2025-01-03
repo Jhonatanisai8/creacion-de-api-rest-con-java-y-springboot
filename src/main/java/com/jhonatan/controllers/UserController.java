@@ -35,7 +35,7 @@ public class UserController {
         return user;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     User update(@RequestBody User user) {
         //todo: actualizarlo en la base de datos
         return user;
